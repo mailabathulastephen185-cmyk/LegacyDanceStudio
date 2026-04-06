@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Legacy Dance Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Legacy Dance Studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="register.html" class="active">Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="form-hero">
+        <div class="hero-content">
+            <h1>Register Today</h1>
+            <p>Secure your spot in our upcoming classes</p>
+        </div>
+    </section>
+
+    <section class="register-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Full Name</label>
+                        <input id="name" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input id="email" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Phone</label>
+                        <input id="phone" type="tel">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-calendar"></i> Preferred Start Date</label>
+                        <input id="date" type="date">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-dancing"></i> Class Interest</label>
+                        <select id="class" required>
+                            <option value="">Choose your class</option>
+                            <option value="salsa">Salsa</option>
+                            <option value="hiphop">Hip Hop</option>
+                            <option value="contemporary">Contemporary</option>
+                            <option value="kids">Kids Ballet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-info-circle"></i> Experience Level</label>
+                        <select id="level" required>
+                            <option value="">Select level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-check"></i> Register Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Legacy Dance Studio</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("dkQo059uObJr7fJim"); // 🔑 paste here
+})();
+
+function sendEmail(e) {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let date = document.getElementById("date").value;
+    let classType = document.getElementById("class").value;
+    let level = document.getElementById("level").value;
+
+    emailjs.send("service_agzh7dp", "template_b7q833j", {
+        name: name,
+        email: email,
+        phone: phone,
+        date: date,
+        class: classType,
+        level: level
+    })
+    .then(() => {
+        alert("🎉 Registration successful!");
+        document.querySelector("form").reset();
+    })
+    .catch((error) => {
+        console.error(error);
+        alert("❌ Failed to send. Try again.");
+    });
+}
+</script>
+</body>
+</html>

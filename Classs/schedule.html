@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Legacy Dance Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Legacy Dance Studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="register.html">Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero schedule-hero">
+        <div class="hero-content">
+            <h1>Class Schedule</h1>
+            <p>Find the perfect time for your dance journey</p>
+        </div>
+    </section>
+
+    <section class="schedule-section">
+        <div class="container">
+            <div class="schedule-tabs">
+                <button class="tab-btn active" onclick="showTab('sunday')">Sunday</button> 
+                <button class="tab-btn" onclick="showTab('monday')">Monday</button>
+                <button class="tab-btn" onclick="showTab('tuesday')">Tuesday</button>
+                <button class="tab-btn" onclick="showTab('wednesday')">Wednesday</button>
+                <button class="tab-btn" onclick="showTab('Thursday')">Thursday</button>
+                <button class="tab-btn" onclick="showTab('friday')">Friday</button>
+                <button class="tab-btn" onclick="showTab('saturday')">Saturday</button>
+            </div>
+
+            <div id="monday" class="schedule-grid active">
+                <div class="schedule-item">
+                    <h4>6:30 PM</h4>
+                    <p><i class="fas fa-heart"></i> Salsa (Beginner/Intermediate)</p>
+                    <span class="price">$25</span>
+                </div>
+                <div class="schedule-item">
+                    <h4>8:00 PM</h4>
+                    <p><i class="fas fa-drum"></i> Hip Hop (All Levels)</p>
+                    <span class="price">$28</span>
+                </div>
+            </div>
+
+            <div id="wednesday" class="schedule-grid">
+                <div class="schedule-item">
+                    <h4>6:00 PM</h4>
+                    <p><i class="fas fa-child"></i> Kids Ballet (Ages 4-12)</p>
+                    <span class="price">$20</span>
+                </div>
+                <div class="schedule-item">
+                    <h4>7:30 PM</h4>
+                    <p><i class="fas fa-star"></i> Contemporary (Int/Adv)</p>
+                    <span class="price">$30</span>
+                </div>
+            </div>
+
+            <div id="friday" class="schedule-grid">
+                <div class="schedule-item">
+                    <h4>7:00 PM</h4>
+                    <p><i class="fas fa-heart"></i> Salsa Social Dance</p>
+                    <span class="price">$15</span>
+                </div>
+                <div class="schedule-item">
+                    <h4>9:00 PM</h4>
+                    <p>Open Practice Session</p>
+                    <span class="price">FREE</span>
+                </div>
+            </div>
+
+            <div id="saturday" class="schedule-grid">
+                <div class="schedule-item">
+                    <h4>10:00 AM</h4>
+                    <p><i class="fas fa-drum"></i> Hip Hop (Beginner)</p>
+                    <span class="price">$28</span>
+                </div>
+                <div class="schedule-item">
+                    <h4>11:30 AM</h4>
+                    <p><i class="fas fa-star"></i> Contemporary (Intermediate)</p>
+                    <span class="price">$30</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Legacy Dance Studio | <a href="register.html">Book a Class</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Legacy Dance Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Legacy Dance Studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html" class="active">Classes</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="register.html">Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Our Classes</h1>
+            <p>Discover the perfect class for your dance journey</p>
+        </div>
+    </section>
+
+    <section class="classes-section">
+        <div class="container">
+            <div class="classes-grid">
+                
+                <div class="class-card detailed">
+                    <div class="class-icon"><i class="fas fa-drum"></i></div>
+                    <h3>Hip Hop</h3>
+                    <p>Street style moves with urban flair. Perfect for expressing yourself through powerful choreography and freestyle.</p>
+                    <div class="class-details">
+                        <p><strong>Level:</strong> All levels</p>
+                    </div>
+                </div>
+               
+                <div class="class-card detailed">
+                    <div class="class-icon"><i class="fas fa-child"></i></div>
+                    <h3>Kids Ballet</h3>
+                    <p>Fun ballet classes for children ages 4-12. Building grace, confidence, and coordination through imaginative play.</p>
+                    <div class="class-details">
+                        <p><strong>Level:</strong> Ages 4-12</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Legacy Dance Studio | <a href="register.html">Register Now</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

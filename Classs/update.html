@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Legacy Dance Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .schedule-grid {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.schedule-grid.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+}
+.schedule-content {
+    position: relative;
+    min-height: 250px; /* prevents jumping */
+}.grid {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.grid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.tab-btn {
+    border: 2px solid #ff6b6b;
+    background: transparent;
+    color: #ff6b6b;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #ff6b6b;
+    color: white;
+}
+
+.tab-btn:hover {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Legacy Dance Studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="register.html">Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero schedule-hero">
+        <div class="hero-content">
+            <h1>hip-hop batch Schedule</h1>
+            <p>Find the perfect time for your dance journey</p>
+        </div>
+    </section>
+
+    <section class="schedule-section">
+        <div class="container">
+            <div class="schedule-tabs">
+                <button class="tab-btn active" onclick="showTab('sunday',event)">Sunday</button> 
+                <button class="tab-btn " onclick="showTab('monday',event)">Monday</button>
+                <button class="tab-btn " onclick="showTab('tuesday',event)">Tuesday</button>
+                <button class="tab-btn " onclick="showTab('wednesday',event)">Wednesday</button>
+                <button class="tab-btn " onclick="showTab('thursday',event)">Thursday</button>
+                <button class="tab-btn " onclick="showTab('friday',event)">Friday</button>
+                <button class="tab-btn " onclick="showTab('saturday',event)">Saturday</button>
+            </div>
+<div class="schedule-content">
+            <div id="sunday" class="schedule-grid active">                
+                    <div class="grid">
+                    <h1>No Class Today!</h1>
+                    </div>
+            </div>
+            <div id="monday" class="schedule-grid ">
+                <div class="grid">
+                    <h4>7:00 PM</h4>
+                    <p><i class="fas fa-drum"></i> Hip Hop (All Levels)</p>
+                </div>
+            </div>
+            <div id="tuesday" class="schedule-grid ">
+                <div class="grid">
+                    <h4>7:00 PM</h4>
+                    <p><i class="fas fa-drum"></i> Hip Hop (All Levels)</p>
+                </div>
+            </div>
+
+            <div id="wednesday" class="schedule-grid">
+                 <div class="grid">
+                    <h4>7:00 PM</h4>
+                    <p><i class="fas fa-drum"></i> Hip Hop (All Levels)</p>
+                </div>
+            </div>
+            <div id="thursday" class="schedule-grid ">
+                <div class="grid">
+                    <h4>7:00 PM</h4>
+                    <p><i class="fas fa-drum"></i> Hip Hop (All Levels)</p>
+                </div>
+            </div>
+            <div id="friday" class="schedule-grid">
+                <div class="grid">
+                   <h1>No Class Today!</h1>
+                </div>
+            </div>
+
+            <div id="saturday" class="schedule-grid">
+                <div class="grid">
+                   <h1>No Class Today!</h1>
+                </div>
+            </div>
+</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Legacy Dance Studio | <a href="register.html">Book a Class</a></p>
+        </div>
+    </footer>
+
+    
+    <script>
+        function showTab(tabName, event) {
+    document.querySelectorAll('.schedule-grid').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    document.getElementById(tabName).classList.add('active');
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    event.target.classList.add('active');
+}
+    </script>
+</body>
+</html>

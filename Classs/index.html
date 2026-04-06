@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Dance Studio - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation (same for all pages) -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Legacy Dance Studio</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li class="dropdown">
+                    <a href="schedule.html" class="dropdown-toggle">Schedule</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="batch1.html">Hip-Hop Batch</a></li>
+                            <li><a href="batch2.html">Kids Batch</a></li>
+                        </ul>
+                </li>
+                <li><a href="register.html">Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" >
+        <div class="hero-content">
+            <h1>Find Your Legacy</h1>
+            <p>Join our vibrant dance classes and unleash your inner dancer. Beginners to advanced - all welcome!</p>
+            <a href="register.html" class="cta-button">Start Dancing Today</a>
+        </div>
+    </section>
+
+    <!-- Quick Classes Preview -->
+    <section class="preview-section">
+        <div class="container">
+            <h2>Batches</h2>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-icon"><i class="fas fa-child"></i></div>
+                    <h3>Kids</h3>
+                    <p>Learn the basic steps.</p>
+                    <a href="classes.html" class="card-link">Learn More →</a>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon"><i class="fas fa-drum"></i></div>
+                    <h3>Hip Hop</h3>
+                    <p>Street style with urban flair</p>
+                    <a href="classes.html" class="card-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Legacy Dance Studio | <a href="contact.html">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
