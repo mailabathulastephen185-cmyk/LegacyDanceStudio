@@ -49,6 +49,10 @@ nav {
     display: flex;
     list-style: none;
     gap: 2rem;
+    display: none;
+}
+.nav-links.active{
+    display: block;
 }
 
 .nav-links a {
@@ -92,7 +96,7 @@ nav ul {
 
 /* Dropdown items */
 .dropdown-menu li {
-    padding: 10px 5px;
+    padding: 10px 0px;
 }
 
 .dropdown-menu li a {
@@ -111,9 +115,7 @@ nav ul {
     color:#f0f0f0;
 }
 /* SHOW dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+
 .dropdown-menu {
     opacity: 0;
     visibility: hidden;
@@ -141,7 +143,7 @@ nav ul {
     background: rgb(170, 207, 219);
     padding: 15px;
     border-radius: 15px;
-    margin-top: 10px;
+    margin-top: 90px;
 }
 .dropdown-menu li{
     border-radius: 5px;
@@ -151,6 +153,42 @@ nav ul {
 .dropdown.active .dropdown-menu {
     display: block;
 }
+}
+.dropdown.active .dropdown-menu{
+    display: block;
+}
+/* Default hidden */
+/* Always hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Desktop hover */
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Mobile click */
+@media (max-width: 768px) {
+    .dropdown.active .dropdown-menu {
+        display: block;
+        position: static; /* important for mobile */
+    }
+    .dropdown-menu {
+        position: static;
+        background: #0f766e;
+        padding-left: 15px;
+    }
+
+    .dropdown-menu li {
+        margin: 10px 0;
+    }
 }
 .hamburger {
     display: none;
@@ -478,7 +516,7 @@ section {
 }
 
 /* Responsive */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -512,4 +550,55 @@ section {
         flex-direction: column;
         align-items: center;
     }
+}
+/* DESKTOP */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: teal;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .dropdown-menu {
+    margin-top: 6px;
+    transition: all 0.3s ease;
+}
+.dropdown-menu li{
+    padding: 0px;
+}
+}
+.social-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-card a {
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.social-card a:hover {
+    transform: translateY(-5px);
 }
