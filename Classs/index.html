@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Dance Studio - Home</title>
+    <title>Legacy Dance Studio - Home index</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -83,6 +83,162 @@ font-size:80px;
 margin-top:40px;
 color:#E1306C;
 }
+/* DEFAULT (DESKTOP) */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+.social-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.social-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.social-section p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.social-card {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.social-card:hover {
+    transform: scale(1.02);
+}
+
+/* YouTube */
+.youtube-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.youtube-card a {
+    display: block;
+    margin: 15px;
+    padding: 12px;
+    background: #ff0000;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Instagram */
+.insta-card {
+    padding: 30px 20px;
+}
+
+.insta-card i {
+    font-size: 50px;
+    color: #E1306C;
+    margin-bottom: 10px;
+}
+
+.insta-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* NAV MENU */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;   /* hidden */
+    width: 75%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 25px;
+
+    background: rgba(20, 120, 120, 0.95);
+    backdrop-filter: blur(15px);
+
+    transition: right 0.4s ease;
+    z-index: 999;
+}
+
+/* SHOW MENU */
+.nav-links.active {
+    right: 0;
+}
+
+/* LINKS */
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.4);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+}
     </style>
 </head>
 <body>
@@ -111,6 +267,8 @@ color:#E1306C;
                 <span></span>
             </div>
         </nav>
+            <div class="overlay" onclick="toggleMenu(event)"></div>
+
     </header>
 
     <!-- Hero Section -->
@@ -184,12 +342,8 @@ color:#E1306C;
         </div>
     </footer>
 
-    <script src="script1.js" ></script>
-<script>
-document.querySelector(".hamburger").onclick = function() {
-    document.querySelector(".nav-links").classList.toggle("active");
-    console.log("Hamburger clicked");
-};
+    <script src="script.js" ></script>
+
 </script>
 </body>
 </html>
