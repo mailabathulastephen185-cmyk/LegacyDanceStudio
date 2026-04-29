@@ -694,7 +694,7 @@ header {
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, teal, rgb(45, 205, 214));
 }
-    .hamburger {
+.hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
