@@ -110,20 +110,29 @@ setTimeout(animateOnScroll, 100);
 
 // ✅ NAVBAR BACKGROUND ON SCROLL
 window.addEventListener("scroll", function () {
-const header = document.querySelector("header");
 
+    const header = document.querySelector("header");
 
-if (header) {
-    if (window.scrollY > 100) {
-        header.style.background = "teal";
+    if (!header) return;
+
+    if (window.scrollY > 50) {
+
+        header.style.background =
+        "linear-gradient(135deg, teal, rgb(45, 205, 214))";
+
+        header.style.boxShadow =
+        "0 8px 20px rgba(0,0,0,0.15)";
+
     } else {
-        header.style.background = "linear-gradient(135deg, teal, rgba(45,205,214))";
+
+        header.style.background =
+        "linear-gradient(135deg, teal, rgb(45, 205, 214))";
+
+        header.style.boxShadow =
+        "0 2px 10px rgba(0,0,0,0.1)";
     }
-}
 
-animateOnScroll();
-
-
+    animateOnScroll();
 });
 
 // ✅ SCROLL ANIMATION
@@ -183,3 +192,4 @@ setTimeout(() => {
 
 
 });
+
