@@ -763,3 +763,385 @@ header {
 }
 }
 
+/* ========================================= */
+/* PREMIUM MOBILE UI */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+body {
+    background: #f5f7fb;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    padding: 0.7rem 0;
+    
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+nav {
+    padding: 0 18px;
+}
+
+/* LOGO */
+
+.logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    max-width: 180px;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2.5px;
+    border-radius: 20px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* ================= MOBILE NAV ================= */
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    width: 82%;
+    height: 100vh;
+
+    padding: 110px 28px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    background: rgba(9, 25, 35, 0.96);
+    backdrop-filter: blur(20px);
+
+    transition: 0.45s ease;
+    z-index: 999;
+
+    border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-links.active {
+    right: 0;
+}
+
+/* NAV LINKS */
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+    padding: 14px 18px;
+
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: linear-gradient(135deg, #00c6c6, #00e1ff);
+    color: black;
+    transform: translateX(6px);
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* PREMIUM DARK OVERLAY */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    
+
+    z-index: 0;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADING */
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -1px;
+
+    color: white;
+}
+
+/* PARAGRAPH */
+
+
+
+/* CTA BUTTON */
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 34px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #00d2d3, #54f0ff);
+
+    color: black;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    box-shadow:
+    0 10px 30px rgba(0, 210, 211, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+/* ================= SOCIAL SECTION ================= */
+
+.social-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.social-section h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.social-section p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 35px;
+}
+
+/* SOCIAL CARDS */
+
+.social-card {
+    background: white;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.08);
+
+    transition: 0.35s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+}
+
+/* YOUTUBE IMAGE */
+
+.youtube-card img {
+    width: 100%;
+    display: block;
+}
+
+/* CARD CONTENT */
+
+.social-card h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.social-card p {
+    padding: 0 20px;
+}
+
+/* BUTTONS */
+
+.youtube-card a,
+.insta-card a {
+    margin: 20px;
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.youtube-card a:hover,
+.insta-card a:hover {
+    transform: scale(1.04);
+}
+
+/* ================= BATCH SECTION ================= */
+
+.preview-section {
+    padding: 80px 20px;
+}
+
+.preview-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.class-card {
+    border-radius: 28px;
+    padding: 35px 25px;
+
+    background: white;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.07);
+
+    transition: 0.35s;
+}
+
+.class-card:hover {
+    transform: translateY(-10px);
+}
+
+.class-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #071018;
+    padding: 35px 20px;
+}
+
+footer p {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+}
+
+}
+/* ================================= */
+/* HERO POP ANIMATION */
+/* ================================= */
+
+.hero-content h1,
+.hero-content p,
+.cta-button {
+
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+
+    animation-fill-mode: forwards;
+}
+
+/* HEADING */
+.hero-content h1 {
+    animation: popUp 1s ease forwards;
+}
+
+/* PARAGRAPH */
+.hero-content p {
+    animation: popUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* BUTTON */
+.cta-button {
+    animation: popUp 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* KEYFRAMES */
+@keyframes popUp {
+
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.03);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.hero::before {
+    animation: zoomBg 8s ease-in-out infinite alternate;
+}
+
+@keyframes zoomBg {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
