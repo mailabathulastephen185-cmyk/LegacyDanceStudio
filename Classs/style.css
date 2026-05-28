@@ -884,85 +884,7 @@ nav {
     visibility: visible;
 }
 
-/* ================= HERO ================= */
 
-.hero {
-    height: 100vh;
-    padding: 0 24px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    overflow: hidden;
-}
-
-/* PREMIUM DARK OVERLAY */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    
-
-    z-index: 0;
-}
-
-/* HERO CONTENT */
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-/* HEADING */
-
-.hero-content h1 {
-    font-size: 3rem;
-    line-height: 1.05;
-    font-weight: 800;
-
-    margin-bottom: 18px;
-
-    letter-spacing: -1px;
-
-    color: white;
-}
-
-/* PARAGRAPH */
-
-
-
-/* CTA BUTTON */
-
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 16px 34px;
-
-    border-radius: 50px;
-
-    background: linear-gradient(135deg, #00d2d3, #54f0ff);
-
-    color: black;
-
-    font-weight: 700;
-    font-size: 1rem;
-
-    box-shadow:
-    0 10px 30px rgba(0, 210, 211, 0.35);
-
-    transition: 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-4px) scale(1.03);
-}
 
 /* ================= SOCIAL SECTION ================= */
 
@@ -1144,4 +1066,83 @@ footer p {
     to {
         transform: scale(1.08);
     }
+}
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* PREMIUM DARK OVERLAY */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    
+
+    z-index: 0;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADING */
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -1px;
+
+    color: white;
+}
+
+/* PARAGRAPH */
+
+
+
+/* CTA BUTTON */
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 34px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #00d2d3, #54f0ff);
+
+    color: black;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    box-shadow:
+    0 10px 30px rgba(0, 210, 211, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px) scale(1.03);
 }
